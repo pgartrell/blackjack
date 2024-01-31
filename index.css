@@ -1,0 +1,52 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ;
+    background-image: url("/images/eyestetix-studio-m0EzHtexapU-unsplash.jpg");
+    background-color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 5em;
+}
+
+.blackjackh1, p{
+    text-align: center;
+}
+
+p{
+    font-size: 3em;
+    color: whitesmoke;
+}
+
+#message-el {
+    font-style:italic ;
+}
+
+.transparent {
+    background-color: rgba(255,255,255,0.5); 
+}
+
+button {
+    background-color: goldenrod;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: x-large;
+    font-weight: bold;
+    color: green;
+}
+.buttonCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    size: 5em;
+    padding: 5px;
+}
