@@ -37,12 +37,11 @@ cardsEl.textContent = "Cards: " + cards[0] + " and " + cards[1]
 }
 
 function newCard() {
-    // if (newDrawEl.onclick) {
-        let newDraw = Math.trunc(Math.random() * 10) + 2
-        // cardsEl.textContent =  "Cards: " + firstCard + " and " + secondCard + " and " + newDraw
-        sum += newDraw
-        // sumEl.textContent = "Sum: " + sum
 
+        let newDraw = Math.trunc(Math.random() * 10) + 2
+        sum += newDraw
+        cards.push(newDraw)
+        console.log(cards)
         renderGame()
-    // }
+
 }
