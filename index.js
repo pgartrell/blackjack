@@ -1,5 +1,5 @@
-let firstCard = Math.trunc(Math.random() * 10) + 2
-let secondCard = Math.trunc(Math.random() * 10) + 2
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 
@@ -14,11 +14,22 @@ let sumEl = document.getElementById("sum")
 let cardsEl = document.getElementById("cards")
 let newDrawEl = document.getElementById("new")
 
+
+function getRandomCard() {
+    let value = Math.trunc(Math.random() * 10) + 2
+    return value
+}
+
+
 function start() {
     renderGame()
 }
 
 function renderGame() {
+    cardsEl.textContent = "Cards: "
+for(let i=0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " "
+}
     
 if (sum <= 20) {
     message = "Do you want to draw again?"
@@ -33,15 +44,12 @@ if (sum <= 20) {
 
 messageEl.textContent = message
 sumEl.textContent = "Sum: " + sum
-cardsEl.textContent = "Cards: " + cards[0] + " and " + cards[1]
 }
 
 function newCard() {
-
-        let newDraw = Math.trunc(Math.random() * 10) + 2
+        let newDraw = getRandomCard()
         sum += newDraw
         cards.push(newDraw)
-        console.log(cards)
         renderGame()
 
 }
