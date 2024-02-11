@@ -45,7 +45,7 @@ if (sum <= 20) {
     message = "Wohoo you got blackjack!"
     hasBlackJack = true
 } else {
-    message = "You're out of the game, press New Card to start a new game"
+    message = "You're out of the game, press Start Game to start a new game"
     isAlive = false
 }
 
@@ -55,17 +55,12 @@ sumEl.textContent = "Sum: " + sum
 }
 
 function newCard() {
+
+      if(isAlive === true && hasBlackJack === false){
         let newDraw = getRandomCard()
         sum += newDraw
         cards.push(newDraw)
         renderGame()
-
-    //   if(sum >= 21){
-    //     cards = []
-    //     sum = 0
-    //   } else {
-    //         cards.push(newDraw)
-    //         renderGame()
-    //   }
+      } 
 
 }
